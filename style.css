@@ -1649,3 +1649,15 @@ label.required span::after {
     box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
   }
 }
+/* FORZAR que el contacto sea 1 columna en celular */
+@media (max-width: 900px) {
+  .contacto-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .formulario,
+  .info-contacto {
+    width: 100% !important;
+  }
+}
