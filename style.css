@@ -1133,38 +1133,63 @@ label.required span::after {
 
 
 /* ------------------------------
-   PAGINA PRODUCTO MANDARINA
+   PAGINA PRODUCTO MANDARINA (v2)
 ------------------------------ */
 
+/* ------------------------------
+   HERO
+------------------------------ */
 .hero-mandarina {
   height: 70vh;
+  min-height: 420px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
-  background: url("img/mandarina.JPG") no-repeat center center/cover;
+  position: relative;
+  background: url("img/mandarina.JPG") center/cover no-repeat;
+}
+
+.hero-mandarina::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* overlay para mejor lectura */
 }
 
 .hero-mandarina h1 {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-size: 3.5rem;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ffffff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   animation: fadeDown 1s ease-in-out;
-  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
-  line-height: 1.2;        /* 🔹 controla espacio interno */
 }
-/* Intro (texto izq, imagen der) */
-/* Intro Mandarina */
+
+/* HERO RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-mandarina {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-mandarina h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* ------------------------------
+   INTRO MANDARINA
+------------------------------ */
+
 .intro-mandarina {
   display: flex;
+  gap: 2.5rem;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
   padding: 3rem 2rem;
   background: #f9f9f9;
   border-radius: 12px;
@@ -1172,30 +1197,28 @@ label.required span::after {
 }
 
 .intro-texto {
-  flex: 1 1 50%;
+  flex: 1 1 500px;
 }
 
 .intro-texto h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #2d572c;
   margin-bottom: 1rem;
 }
 
 .intro-texto p {
   margin-bottom: 1rem;
-  color: #333;
   line-height: 1.6;
+  color: #333;
 }
 
 .intro-texto ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .intro-texto ul li {
   margin-bottom: 0.5rem;
   color: #444;
-  font-size: 1rem;
 }
 
 .frase-final {
@@ -1205,7 +1228,7 @@ label.required span::after {
 }
 
 .intro-imagen {
-  flex: 1 1 40%;
+  flex: 1 1 380px;
   text-align: center;
 }
 
@@ -1214,18 +1237,17 @@ label.required span::after {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-/* ============================
-   RESPONSIVE P_MANDARINA
-============================ */
 
-/* INTRO MANDARINA */
+/* INTRO RESPONSIVE */
+@media (max-width: 1024px) {
+  .intro-mandarina {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .intro-mandarina {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .intro-texto {
     text-align: center;
   }
 
@@ -1235,14 +1257,16 @@ label.required span::after {
 
   .intro-imagen img {
     width: 90%;
-    margin: 0 auto;
   }
 }
 
-/* Sección Variedades */
+/* ------------------------------
+   VARIEDADES
+------------------------------ */
+
 .variedades {
   background: linear-gradient(135deg, #eaf7ea, #ffffff);
-  padding: 3rem 2rem;
+  padding: 3.5rem 2rem;
   border-radius: 12px;
   margin-bottom: 3rem;
 }
@@ -1250,35 +1274,31 @@ label.required span::after {
 .variedades h2 {
   text-align: center;
   color: #2d572c;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .variedad {
   display: flex;
   align-items: center;
-  margin-bottom: 4rem; /* 👈 más espacio entre variedades */
+  margin-bottom: 4rem;
+  gap: 2rem;
 }
-
-
 
 .variedad img {
-  width: 350px;    /* tamaño fijo */
-  height: auto;    /* mantiene proporción */
+  flex-shrink: 0;
+  width: 320px;
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin-left: 5rem; /* 🔹 mueve la imagen hacia la derecha */
-  margin-right: 5rem; /* 🔹 agrega espacio a la derecha */
 }
 
-
 .variedad .info {
-  flex: 1 1 60%;
-  margin-left: 5rem; /* 🔹 mueve toda la caja más a la derecha */
+  flex: 1;
 }
 
 .variedad .info h3 {
   color: #2d572c;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .variedad .info p {
@@ -1286,45 +1306,56 @@ label.required span::after {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
 .variedad .info .frase-final {
   font-weight: bold;
-  margin-left: 0.0rem; /* 🔹 sangría solo en esta frase */
 }
 
 .variedad .info ul {
-  margin-left: 3.5rem; /* 🔹 sangría general para las viñetas */
-  list-style-type: disc; /* 🔹 viñeta tipo punto */
+  margin-left: 1.8rem;
+  list-style: disc;
 }
 
 .variedad .info ul li {
-  margin-bottom: 0.5rem; /* separa un poco cada viñeta */
+  margin-bottom: 0.5rem;
 }
 
-/* VARIEDADES RESPONSIVE */
+/* VARIEDADES – RESPONSIVE */
+@media (max-width: 1200px) {
+  .variedad img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .variedad {
+    gap: 1.5rem;
+  }
+  .variedad img {
+    width: 250px;
+  }
+}
+
 @media (max-width: 900px) {
   .variedad {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 4rem;
   }
 
   .variedad img {
     width: 90%;
-    margin: 0 auto 1rem auto;
-  }
-
-  .variedad .info {
-    margin-left: 0;
   }
 
   .variedad .info ul {
     margin-left: 0;
     padding-left: 1.2rem;
+    text-align: left;
   }
 }
 
-
-/* Ficha técnica */
+/* ------------------------------
+   FICHA TÉCNICA
+------------------------------ */
 
 .ficha-tecnica {
   padding: 3rem 2rem;
@@ -1333,19 +1364,19 @@ label.required span::after {
 }
 
 .ficha-container {
-  width: 40%;
-  max-width: 500px;
+  width: 45%;
+  max-width: 520px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  padding: 1.5rem;
+  padding: 1.5rem 1.8rem;
   text-align: center;
 }
 
 .ficha-container h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #2d572c;
-  font-size: 1.8rem;
   border-bottom: 2px solid #21bd02ee;
   padding-bottom: 0.5rem;
 }
@@ -1353,7 +1384,7 @@ label.required span::after {
 .ficha-container table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 .ficha-container th,
@@ -1374,13 +1405,19 @@ label.required span::after {
 }
 
 .ficha-container .nota {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #555;
   margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
 }
 
-/* FICHA TÉCNICA RESPONSIVE */
+/* FICHA TÉCNICA – RESPONSIVE */
+@media (max-width: 900px) {
+  .ficha-container {
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
   .ficha-container {
     width: 90%;
@@ -1391,11 +1428,7 @@ label.required span::after {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 600px) {
-  .hero-mandarina h1 {
-    font-size: 2.2rem;
-  }
-}
+
 /* ------------------------------
    PAGINA PRODUCTO NARANJA
 ------------------------------ */
