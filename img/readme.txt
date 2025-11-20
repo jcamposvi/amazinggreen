@@ -1,0 +1,1 @@
+Coloca tus imágenes aquí (campo.jpg, arroz.jpg, etc.)
