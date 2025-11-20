@@ -1648,6 +1648,7 @@ label.required span::after {
     box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
   }
 }
+
 /* ============================
    💚 FIX RESPONSIVE CONTACTO
    ============================ */
@@ -1690,8 +1691,4 @@ label.required span::after {
     justify-content: center !important;
   }
 }
-  .formulario,
-  .info-contacto {
-    width: 100% !important;
-  }
-}
+
