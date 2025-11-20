@@ -1255,7 +1255,9 @@ label.required span::after {
 .variedad {
   display: flex;
   align-items: center;
+  margin-bottom: 4rem; /* 👈 más espacio entre variedades */
 }
+
 
 
 .variedad img {
@@ -1302,6 +1304,7 @@ label.required span::after {
   .variedad {
     flex-direction: column;
     text-align: center;
+    margin-bottom: 2.5rem;
   }
 
   .variedad img {
