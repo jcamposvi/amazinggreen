@@ -1213,7 +1213,30 @@ label.required span::after {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+/* ============================
+   RESPONSIVE P_MANDARINA
+============================ */
 
+/* INTRO MANDARINA */
+@media (max-width: 900px) {
+  .intro-mandarina {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-texto {
+    text-align: center;
+  }
+
+  .intro-texto ul {
+    padding-left: 0;
+  }
+
+  .intro-imagen img {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 
 /* Sección Variedades */
 .variedades {
@@ -1232,9 +1255,8 @@ label.required span::after {
 .variedad {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
 }
+
 
 .variedad img {
   width: 350px;    /* tamaño fijo */
@@ -1273,6 +1295,28 @@ label.required span::after {
 
 .variedad .info ul li {
   margin-bottom: 0.5rem; /* separa un poco cada viñeta */
+}
+
+/* VARIEDADES RESPONSIVE */
+@media (max-width: 900px) {
+  .variedad {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .variedad img {
+    width: 90%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .variedad .info {
+    margin-left: 0;
+  }
+
+  .variedad .info ul {
+    margin-left: 0;
+    padding-left: 1.2rem;
+  }
 }
 
 
@@ -1331,6 +1375,24 @@ label.required span::after {
   color: #555;
   margin-top: 1rem;
 }
+
+/* FICHA TÉCNICA RESPONSIVE */
+@media (max-width: 768px) {
+  .ficha-container {
+    width: 90%;
+  }
+
+  .ficha-container table th,
+  .ficha-container table td {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-mandarina h1 {
+    font-size: 2.2rem;
+  }
+}
+
 
 
 /* ------------------------------
