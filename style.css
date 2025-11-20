@@ -622,6 +622,50 @@ header.scrolled {
   border-radius: 8px;
 }
 
+/* ===============================
+   RESPONSIVE CONTACTO
+================================== */
+@media (max-width: 900px) {
+
+  /* Cambiar a 1 columna */
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mejorar lectura en móvil */
+  .info-contacto p {
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info-contacto i {
+    font-size: 1.3rem;
+    margin-right: 5px;
+  }
+
+  /* Mejorar espaciado */
+  .formulario,
+  .info-contacto {
+    padding: 1rem;
+  }
+
+  /* Redes sociales más grandes */
+  .redes-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Centrado general */
+  .redes,
+  .formulario h3,
+  .info-contacto h3 {
+    text-align: center;
+  }
+
+}
+
 /* ------------------------------
    FOOTER
 ------------------------------ */
