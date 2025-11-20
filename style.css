@@ -1649,13 +1649,48 @@ label.required span::after {
     box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
   }
 }
-/* FORZAR que el contacto sea 1 columna en celular */
+/* ============================
+   💚 FIX RESPONSIVE CONTACTO
+   ============================ */
 @media (max-width: 900px) {
+
+  /* Forzar una sola columna */
   .contacto-container {
-    display: grid !important;
     grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 
+  /* Asegurar que cada tarjeta tome su propia fila */
+  .formulario,
+  .info-contacto {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+
+  /* Centrado del texto */
+  .formulario h3,
+  .info-contacto h3 {
+    text-align: center !important;
+  }
+
+  /* Íconos y textos centrados */
+  .info-contacto p {
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  /* Ajustar tamaño de íconos */
+  .info-contacto i {
+    font-size: 1.4rem !important;
+    margin-right: 0 !important;
+  }
+
+  /* Redes sociales centradas */
+  .redes-icons {
+    justify-content: center !important;
+  }
+}
   .formulario,
   .info-contacto {
     width: 100% !important;
