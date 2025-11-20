@@ -1,0 +1,1607 @@
+/* CSS base natural/agrícola */
+/* ------------------------------
+   ESTILOS GENERALES
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #2d572c; /* Verde agrícola */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  background-color: #052401; /* Verde corporativo */
+  color: #fff;
+  padding: 0.5rem 2rem;
+  position: fixed;   /* siempre visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* encima del resto */
+}
+
+/* FLEX para que logo y menú estén en la misma fila */
+.header-container {
+  max-width: 1200px;   /* ancho máximo */
+  margin: 0 auto;      /* centra el contenido */
+  display: flex;
+  justify-content: space-between; /* separa logo a la izq. y menú a la der. */
+  align-items: center; /* centra verticalmente */
+}
+
+/* Logo */
+.logo img {
+  height: 70px; /* Ajusta tamaño del logo */
+  object-fit: contain;
+}
+
+/* Menú */
+.menu {
+  display: flex; /* coloca enlaces en fila */
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #21bd02ee;
+}
+
+body {
+  margin: 0;
+  padding-top: 80px; /* deja espacio para el header */
+}
+
+section {
+  scroll-margin-top: 80px; /* cuando haces clic en el menú */
+}
+/* ===================================
+   MENÚ DESKTOP ELEGANTE Y PROFESIONAL
+=================================== */
+
+/* Header con sombra al hacer scroll */
+header.scrolled {
+  background-color: #052401;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Ajuste del menú en escritorio */
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Enlaces del menú */
+.menu a {
+  position: relative;
+  padding: 4px 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+/* Línea animada debajo del enlace (efecto Apple) */
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #21bd02, #2d572c);
+  border-radius: 2px;
+  transition: width 0.35s ease-in-out;
+}
+
+/* Activación de la línea en hover */
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Cambio de color suave */
+.menu a:hover {
+  color: #21bd02;
+}
+
+/* Logo con efecto suave */
+.logo img {
+  height: 70px;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Efecto visual al pasar cursor */
+.logo img:hover {
+  transform: scale(1.06);
+  filter: brightness(1.15);
+}
+
+
+/* ------------------------------
+   HERO
+------------------------------ */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.1s ease-in-out; /* transición suave */
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* oscurece para dar contraste */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+
+.hero p {
+  margin-top: 60px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  animation: fadeUp 1.3s ease-in-out;
+  margin-top: 0;           /* 🔹 elimina espacio extra arriba */
+  line-height: 1.4;        /* 🔹 interlineado del párrafo */
+}
+
+.hero .btn {
+  background: linear-gradient(135deg, #21bd02ee, #2d572c);
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeUp 1.6s ease-in-out;
+}
+
+.hero .btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #2d572c, #21bd02ee);
+  box-shadow: 0 0 15px rgba(33, 189, 2, 0.6);
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+   SECCIÓN NOSOTROS
+------------------------------ */
+.nosotros {
+  background-color: #e8f5e9; /* verde suave */
+  padding: 3rem 2rem;
+}
+
+.nosotros .contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.nosotros h2 {
+  color: #2d572c; /* verde agrícola */
+}
+
+.nosotros .texto {
+  flex: 1;
+  margin-left: 40px; /* mueve todo el bloque */
+}
+
+.nosotros .texto p {
+  text-align: justify;
+}
+
+.nosotros .texto ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.nosotros .imagen {
+  flex: 1;
+  text-align: center;
+}
+.nosotros .btn {
+  display: inline-block;
+  margin-top: 2rem;   /* antes era 1rem */
+  padding: 0.8rem 1.5rem;
+  background: #2d572c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+
+/* ------------------------------
+   SECCIÓN PRODUCTOS
+------------------------------ */
+.productos {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+.productos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d572c;
+}
+
+.productos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.productos article {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  font-style: italic;
+}
+
+.productos article:hover {
+  transform: translateY(-5px);
+}
+
+.producto-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.producto-link:hover {
+  transform: scale(1.05); /* agranda un poco */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* sombra */
+}
+
+
+/* ------------------------------
+   SECCIÓN TESTIMONIOS
+------------------------------ */
+.testimonios {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonios h2 {
+  margin-bottom: 2rem;
+  color: #2d572c;
+}
+
+.testimonios .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonios article {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+.testimonios .grid article {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* para que nombre quede abajo */
+}
+
+.contenido-testimonio {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.contenido-testimonio i {
+  font-size: 1.5rem;
+  color: #21bd02ee; /* tu verde corporativo */
+}
+
+.testimonios .grid article span {
+  align-self: flex-end;  /* 🔹 lo empuja a la derecha */
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+
+
+/* ------------------------------
+   SLIDER DE FOTOS
+------------------------------ */
+.slider-loop {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides-loop {
+  display: flex;
+  width: calc(200%); /* porque duplicamos las imágenes */
+  animation: scroll 30s linear infinite; /* 🔹 velocidad ajustable */
+}
+
+.slides-loop img {
+  width: 200px;          /* ancho base */
+  aspect-ratio: 1 / 1;   /* 🔹 asegura que sea cuadrada */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+}
+
+/* Animación infinita */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* se mueve la mitad del contenedor */
+  }
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .slides-loop img { width: 50%; height: 300px; } /* 3 imágenes */
+}
+
+@media (max-width: 768px) {
+  .slides-loop img { width: 100%; height: 280px; } /* 2 imágenes */
+}
+
+@media (max-width: 480px) {
+  .slides-loop img { width: 100%; height: 200px; } /* 1 imagen */
+}
+
+/* ------------------------------
+   SECCIÓN VIDEO
+------------------------------ */
+.video-section {
+  padding: 3rem 2rem;
+  background: #040a05;
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.video-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.video-col img {
+  width: 60%;        /* 🔹 antes 100%, ahora más pequeña */
+  height: auto;
+  display: block;
+  margin: 0 auto;    /* 🔹 centra la imagen en su columna */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.video-col video {
+  width: 100%;
+  height: 315px;  /* 🔹 puedes aumentar si lo quieres más grande */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.video-section h2 {
+  text-align: center;
+  margin-bottom: 2rem; /* opcional: espacio debajo del título */
+  color: #2d572c;      /* opcional: darle estilo */
+}
+
+
+
+/* ------------------------------
+   SECCIÓN CONTACTO
+------------------------------ */
+.contacto {
+  background-color: #e8f5e9;
+  padding: 3rem 2rem;
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d572c;
+}
+
+/* Contenedor principal */
+.contacto-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin: 0 auto 2rem auto;
+  max-width: 1000px;
+}
+
+/* Tarjetas (formulario e info) */
+.formulario,
+.info-contacto {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Formulario */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.formulario input,
+.formulario textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Información de contacto */
+.info-contacto h3 {
+  margin-bottom: 1rem;
+  color: #2d572c;
+}
+
+.info-contacto p {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 8px 0;
+}
+
+.info-contacto i {
+  color: #2d572c;
+  font-size: 1.9rem;
+  flex-shrink: 0;
+}
+
+.formulario h3,
+.info-contacto h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Redes sociales */
+.redes {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.redes p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.redes-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.redes-icons a {
+  background-color: #2d572c;
+  color: #fff;
+  font-size: 0.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background 0.3s;
+  text-decoration: none;
+}
+
+.redes-icons a:hover {
+  background-color: #21bd02ee;
+  transform: scale(1.2);
+}
+.redes-icons a i {
+  color: #fff !important;
+}
+
+/* Tarjeta del mapa */
+.mapa {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  background-color: #21bd02ee;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+/* Menú en columna */
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-menu a:hover {
+  color: #335e3d;
+}
+
+/* Imágenes en línea */
+.footer-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+.footer-logo {
+  max-height: 100px;
+  width: auto;
+}
+.footer-extra {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Texto */
+.footer-text {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.footer-images img {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-images img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #03f578;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nosotros .contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+/* ------------------------------
+   BOTONES GLOBALES
+------------------------------ */
+button,
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #2d572c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover,
+.btn:hover {
+  background: #21bd02ee;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   Libro de Reclamaciones
+------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.ldr-header {
+  display: block;
+  position: static !important; /* 🔹 fuerza a que se mueva con el scroll */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: transparent; /* por si tenía color */
+}
+
+.ldr-header img {
+  max-width: 100%;       /* controla el tamaño del logo */
+  height: auto;
+  display: inline-block;
+}
+
+.ldr {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ldr h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2d572c;
+}
+
+.ldr-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.ldr-form legend {
+  font-weight: bold;
+  color: #2d572c;
+}
+
+.form-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-grid label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.ldr-form input, 
+.ldr-form select, 
+.ldr-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.ldr-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.notas {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.ldr-form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #2d572c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ldr-form button:hover {
+  background: #21bd02ee;
+}
+.detalle-reclamo {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background: #fafafa; /* 🔹 color de fondo claro */
+}
+
+.detalle-reclamo legend {
+  font-weight: bold;
+  color: #2d572c;
+  padding: 0 10px;
+}
+
+.detalle-reclamo label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.detalle-reclamo textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  resize: vertical;
+}
+label.required span::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+.nota-num {
+  color: red;
+  font-weight: bold;
+}
+.declaracion {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.declaracion .col-izq {
+  flex: 1;
+}
+
+.declaracion .col-izq label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.declaracion .col-der {
+  flex: 2;
+}
+
+.declaracion .col-der ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.declaracion .col-der li {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+.logo-container {
+  position: relative;   /* 🔹 referencia para el texto */
+  display: inline-block;
+}
+
+.logo-container img {
+  max-width: 100%;     /* ajusta tamaño del logo */
+  height: auto;
+}
+
+.logo-text {
+  position: absolute;
+  top: 50%;             /* centrado vertical */
+  left: 50%;            /* centrado horizontal */
+  transform: translate(-50%, -50%); /* ajuste perfecto */
+  color: rgb(250, 248, 248);           /* color del texto */
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ------------------------------
+   ESTILOS ESPECÍFICOS POR PÁGINA
+------------------------------ */
+
+/* ------------------------------
+   PAGINA NOSOTROS
+------------------------------ */
+
+.hero-nosotros {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/nosotros.jpg") no-repeat center center/cover;
+}
+
+.hero-nosotros h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+/* ================================
+   SECCIÓN NOSOTROS – PÁGINA INTERNA
+================================ */
+.nosotros-seccion {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.nosotros-contenido {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nosotros-texto h2 {
+  color: #2d572c;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.nosotros-texto p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-style: italic;
+}
+
+.nosotros-imagen img {
+  width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .nosotros-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-imagen img {
+    width: 90%;
+  }
+}
+/* =====================================
+   SECCIÓN VALORES CORPORATIVOS
+===================================== */
+/* Título de la sección de valores */
+.titulo-valores {
+  color: #2d572c;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.valores {
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+}
+
+.valores-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+  gap: 2rem;
+}
+
+.valor-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.valor-box:hover {
+  transform: translateY(-8px);
+}
+
+.valor-box h3 {
+  color: #2d572c;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.valor-box h3 i {
+  color: #21bd02ee;
+  font-size: 1.6rem;
+}
+
+.valor-box p {
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .valores-container {
+    grid-template-columns: 1fr; /* Una por fila */
+  }
+}
+/* Sección imagen full-width */
+.seccion-imagen-full {
+  width: 100%;
+  overflow: hidden;      /* Evita que se salga */
+  background: transparent;    /* 🔹 Fondo transparente */
+  text-align: center;    /* Asegura alineación */  
+}
+
+.seccion-imagen-full img {
+  width: 70%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center; /* 🔥 Centra la imagen sí o sí */
+  display: block;
+  margin: 0 auto;        /* Asegura centrado si la imagen reduce ancho */
+}
+
+
+
+
+
+
+/* ------------------------------
+   PAGINA PRODUCTO MANDARINA
+------------------------------ */
+
+.hero-mandarina {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/mandarina.jpg") no-repeat center center/cover;
+}
+
+.hero-mandarina h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+/* Intro (texto izq, imagen der) */
+/* Intro Mandarina */
+.intro-mandarina {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.intro-texto {
+  flex: 1 1 50%;
+}
+
+.intro-texto h2 {
+  font-size: 2rem;
+  color: #2d572c;
+  margin-bottom: 1rem;
+}
+
+.intro-texto p {
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.intro-texto ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.intro-texto ul li {
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.frase-final {
+  font-weight: bold;
+  color: #2d572c;
+  margin-top: 1rem;
+}
+
+.intro-imagen {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.intro-imagen img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Sección Variedades */
+.variedades {
+  background: linear-gradient(135deg, #eaf7ea, #ffffff);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.variedades h2 {
+  text-align: center;
+  color: #2d572c;
+  margin-bottom: 2rem;
+}
+
+.variedad {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.variedad img {
+  width: 350px;    /* tamaño fijo */
+  height: auto;    /* mantiene proporción */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-left: 5rem; /* 🔹 mueve la imagen hacia la derecha */
+  margin-right: 5rem; /* 🔹 agrega espacio a la derecha */
+}
+
+
+.variedad .info {
+  flex: 1 1 60%;
+  margin-left: 5rem; /* 🔹 mueve toda la caja más a la derecha */
+}
+
+.variedad .info h3 {
+  color: #2d572c;
+  margin-bottom: 0.5rem;
+}
+
+.variedad .info p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.variedad .info .frase-final {
+  font-weight: bold;
+  margin-left: 0.0rem; /* 🔹 sangría solo en esta frase */
+}
+
+.variedad .info ul {
+  margin-left: 3.5rem; /* 🔹 sangría general para las viñetas */
+  list-style-type: disc; /* 🔹 viñeta tipo punto */
+}
+
+.variedad .info ul li {
+  margin-bottom: 0.5rem; /* separa un poco cada viñeta */
+}
+
+
+/* Ficha técnica */
+
+.ficha-tecnica {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ficha-container {
+  width: 40%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.ficha-container h2 {
+  margin-bottom: 1rem;
+  color: #2d572c;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #21bd02ee;
+  padding-bottom: 0.5rem;
+}
+
+.ficha-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.ficha-container th,
+.ficha-container td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.ficha-container th {
+  background: #2d572c;
+  color: #fff;
+  width: 40%;
+}
+
+.ficha-container td {
+  color: #333;
+}
+
+.ficha-container .nota {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem;
+}
+
+
+/* ------------------------------
+   PAGINA PRODUCTO NARANJA
+------------------------------ */
+
+.hero-naranja {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/naranja.jpg") no-repeat center center/cover;
+  background-color: #ffb347; /* tono naranja de respaldo */
+}
+
+.hero-naranja h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+.hero-naranja p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+/* Intro (texto izq, imagen der) */
+/* Intro Mandarina */
+.intro-naranja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------
+   PAGINA PRODUCTO PALTA
+------------------------------ */
+
+.hero-palta {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/palta.jpg") no-repeat center center/cover;
+}
+
+.hero-palta h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+/* ============================
+   SECCIÓN PALTA (DOS COLUMNAS)
+=============================== */
+.palta-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.palta-info .texto {
+  flex: 1;
+  text-align: justify;
+}
+
+.palta-info .texto h2 {
+  font-size: 2rem;
+  color: #2d572c;   /* Verde corporativo */
+  margin-bottom: 1rem;
+}
+
+.palta-info .texto p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.palta-info .imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.palta-info .imagen img {
+  width: 95%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+
+/* ------------------------------
+   PAGINA PRODUCTO MANGO
+------------------------------ */
+
+.hero-mango {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/mango1.jpg") no-repeat center center/cover;
+}
+
+.hero-mango h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: fadeDown 1s ease-in-out;
+  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
+  line-height: 1.2;        /* 🔹 controla espacio interno */
+}
+/* ---------------------------------------------------
+   SECCIÓN DOS COLUMNAS (TEXTO IZQ - IMAGEN DER)
+--------------------------------------------------- */
+.seccion-dos-columnas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.seccion-dos-columnas .columna.texto {
+  flex: 1;
+}
+
+.seccion-dos-columnas .columna.texto h2 {
+  color: #2d572c;           /* Mantener estilo general */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.seccion-dos-columnas .columna.texto p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.seccion-dos-columnas .columna.imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.seccion-dos-columnas .columna.imagen img {
+  width: 90%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .seccion-dos-columnas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seccion-dos-columnas .columna.texto p {
+    text-align: center;
+  }
+}
+
+/* ===============================
+   MENÚ RESPONSIVE MODERNO
+=============================== */
+
+/* 🔹 Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* 🔹 Fondo blur cuando se abre el menú */
+.menu-overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  display: none;
+}
+
+/* 🔹 Estilo del menú desplegable */
+@media (max-width: 768px) {
+
+  .menu {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background: rgba(5, 36, 1, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.8rem;
+    border-left: 2px solid #21bd02;
+    transition: right 0.35s ease-in-out;
+    z-index: 999;
+  }
+
+  .menu a {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    transition: 0.2s ease;
+  }
+
+  .menu a:hover {
+    color: #21bd02;
+    transform: translateX(6px);
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  /* Mostrar el botón en móvil */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ===================================
+   BOTÓN WHATSAPP FLOTANTE
+=================================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.18) rotate(8deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-float i {
+  color: #fff;
+}
+/* ANIMACIÓN DE LATIDO (PULSE) */
+.whatsapp-float {
+  animation: pulseWhats 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseWhats {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 18px rgba(37, 211, 102, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+}

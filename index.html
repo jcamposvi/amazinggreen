@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazing Green</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#inicio">
+        <img src="img/logoP.png" alt="">
+      </a>
+    </div>
+
+    <!-- Menú -->
+    <nav class="menu">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#productos">Productos</a>
+      <a href="index.html#testimonios">Clientes</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <!-- 🔹 Botón hamburguesa -->
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>Amazing Green</h1>
+    <p>Fresh and healthy food</p>
+    <a href="#productos" class="btn">Ver productos</a>
+  </section>
+
+  
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="nosotros">
+    <div class="contenido">
+      <div class="texto">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Amazing Green nació con el propósito de satisfacer 
+          las necesidades alimenticias de las familias peruanas 
+          y extranjeras, ofreciendo frutos de la más alta calidad 
+          tanto en el Perú como en el mundo. Utilizamos energía 
+          renovable para realizar una explotación agrícola en 
+          armonía con el medio ambiente y aplicamos productos 
+          fitosanitarios que son amigables con el entorno. 
+          Nos comprometemos con prácticas agrícolas sostenibles 
+          y responsables para garantizar la salud de nuestro 
+          planeta y de nuestros consumidores.
+        </p>
+        
+        <!-- 🔹 Botón para ir a la página nosotros.html -->
+      <a href="nosotros.html" class="btn">Conoce más...</a>
+
+      </div>
+      <div class="imagen">
+        <img src="img/inicio3.png" alt="Nosotros">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid">
+      <article>
+        <a href="p_mandarina.html" class="producto-link">
+          <img src="img/Rio.jpg" alt="Mandarina">
+          <h3>Mandarina</h3>
+          <p>Alto contenido de vitamina C y antioxidantes naturales.</p>
+        </a>
+      </article>
+      <article>
+        <a href="p_naranja.html" class="producto-link">
+          <img src="img/Naranja.jpeg" alt="Naranja">
+          <h3>Naranja</h3>
+          <p>Fruta cítrica de gran jugosidad y resistencia poscosecha.</p>
+        </a>
+      </article>
+      <article>
+        <a href="p_palta.html" class="producto-link">
+          <img src="img/Palta.jpeg" alt="Palta">
+          <h3>Palta</h3>
+          <p>Rica en ácidos grasos saludables, fibra y minerales esenciales.</p>
+        </a>
+      </article>
+      <article>
+        <a href="p_mango.html" class="producto-link">
+          <img src="img/Mango.jpeg" alt="Mango">
+          <h3>Mango</h3>
+          <p>Pulpa carnosa con alto nivel de betacarotenos y antioxidantes.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="grid">
+    <article>
+      <div class="contenido-testimonio">
+        <i class="fas fa-quote-left"></i>
+        <p>"Excelente calidad en frutas, mis ventas aumentaron."</p>
+      </div>
+      <span>- Juan Pérez</span>
+    </article>
+    <article>
+      <div class="contenido-testimonio">
+        <i class="fas fa-leaf"></i>
+        <p>"Un equipo comprometido con la sostenibilidad agrícola."</p>
+      </div>
+      <span>- María López</span>
+    </article>
+    <article>
+      <div class="contenido-testimonio">
+        <i class="fas fa-seedling"></i>
+        <p>"Confío en Amazing Green en sus cosechas cada temporada."</p>
+      </div>
+      <span>- Carlos Ramírez</span>
+    </article>
+  </div>
+</section>
+
+
+
+
+<!-- SLIDER DE FOTOS -->
+<section class="galeria">
+  <!--<h2>Nuestra Galería</h2>-->
+  <div class="slider-loop">
+    <div class="slides-loop">
+      <div><img src="img/fruto1.jpg" alt="Foto 1"></div>
+      <div><img src="img/fruto2.jpeg" alt="Foto 2"></div>
+      <div><img src="img/fruto3.jpg" alt="Foto 3"></div>
+      <div><img src="img/fruto4.jpg" alt="Foto 4"></div>
+      <div><img src="img/fruto5.jpg" alt="Foto 5"></div>
+      <div><img src="img/fruto6.jpg" alt="Foto 6"></div>
+      <div><img src="img/fruto7.jpg" alt="Foto 7"></div>
+      <div><img src="img/fruto8.jpg" alt="Foto 8"></div>
+      <div><img src="img/fruto9.jpg" alt="Foto 9"></div>
+      <!-- 🔹 Duplicamos las mismas imágenes para el efecto infinito -->
+      <div><img src="img/fruto1.jpg" alt="Foto 1"></div>
+      <div><img src="img/fruto2.jpeg" alt="Foto 2"></div>
+      <div><img src="img/fruto3.jpg" alt="Foto 3"></div>
+      <div><img src="img/fruto4.jpg" alt="Foto 4"></div>
+      <div><img src="img/fruto5.jpg" alt="Foto 5"></div>
+      <div><img src="img/fruto6.jpg" alt="Foto 6"></div>
+      <div><img src="img/fruto7.jpg" alt="Foto 7"></div>
+      <div><img src="img/fruto8.jpg" alt="Foto 8"></div>
+      <div><img src="img/fruto9.jpg" alt="Foto 9"></div> 
+    </div>
+  </div>
+</section>
+
+ <!-- VIDEO -->
+<section id="video" class="video-section">
+  <h2>Conoce más sobre Amazing Green</h2>
+  <div class="video-container">
+    <!-- Columna izquierda: Imagen -->
+    <div class="video-col imagen-col">
+      <img src="img/logoF.png" alt="Imagen representativa">
+    </div>
+
+    <!-- Columna derecha: Video local -->
+    <div class="video-col video-col-right">
+      <video controls>
+        <source src="videos/AmazingGreen.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+  <h2>Contáctanos</h2>
+
+  <div class="contacto-container">
+    <!-- Formulario -->
+    <div class="formulario">
+      <h3>Escríbenos</h3>
+
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Información de contacto -->
+    <div class="info-contacto">
+  <h3>Habla con nosotros</h3>
+  <p><i class="fas fa-envelope"></i> administrador@amazinggreen.com.pe</p>
+  <p><i class="fas fa-phone"></i> 979000000</p>
+  <p><i class="fas fa-map-marker-alt"></i> 
+    Fundo Cruz de Chapón<br>
+    San Miguel Bajo Lote N 01<br>
+    Irrigación San Rosa - Sayan
+  </p>
+
+      <!-- Redes sociales -->
+      <div class="redes">
+        <h3>Síguenos:</h3>
+        <div class="redes-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa -->
+  <div class="mapa">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=TU_URL_DEL_MAPA"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="footer-container">
+    <!-- Columna 1: Menú -->
+    <nav class="footer-menu">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#productos">Productos</a>
+      <a href="index.html#testimonios">Clientes</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <!-- Columna 2: Imágenes centradas en la misma línea -->
+<div class="footer-images">
+  <img src="img/logoF.png" alt="" class="footer-logo">
+
+  <!-- Imagen que lleva a LDR.html -->
+  <a href="LDR.html" target="_blank">
+    <img src="img/LDR.png" alt="LDR" class="footer-extra">
+  </a>
+</div>
+
+    <!-- Columna 3: Texto -->
+    <div class="footer-text">
+      <p>© 2025 Amazing Green - Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a href="https://wa.me/51979000000" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

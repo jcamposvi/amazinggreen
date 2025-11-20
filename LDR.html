@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG-Libro de Reclamaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<section class="ldr">
+  <!-- 🔹 Encabezado con imagen -->
+      <header class="ldr-header">
+  <div class="logo-container">
+    <img src="img/campoLDR.JPG" alt="Logo Amazing Green">
+    <span class="logo-text">Amazing Green</span>
+  </div>
+</header>
+
+  <h2>Libro de Reclamaciones</h2>
+  <form class="ldr-form">
+    <!-- Identificación del consumidor -->
+    <fieldset>
+      <legend>Identificación del consumidor reclamante</legend>
+
+      <div class="form-grid">
+  <label class="required">
+  <span>Nombre(s)</span>
+  <input type="text" name="nombres" required>
+</label>
+
+<label class="required">
+  <span>Primer apellido</span>
+  <input type="text" name="primer_apellido" required>
+</label>
+
+<label>
+  <span>Segundo apellido</span>
+  <input type="text" name="segundo_apellido">
+</label>
+</div>
+
+      <div class="form-grid">
+  <label class="required">
+    <span>Tipo de documento</span>
+    <select name="tipo_documento" required>
+      <option>DNI</option>
+      <option>Pasaporte</option>
+      <option>Carné de extranjería</option>
+    </select>
+  </label>
+
+  <label class="required">
+    <span>Número de documento</span>
+    <input type="text" name="numero_documento" required>
+  </label>
+
+  <label class="required">
+    <span>Teléfono</span>
+    <input type="tel" name="telefono" required>
+  </label>
+</div>
+
+
+      <div class="form-grid">
+  <label class="required">
+    <span>Departamento</span>
+    <input type="text" name="departamento" required>
+  </label>
+
+  <label class="required">
+    <span>Provincia</span>
+    <input type="text" name="provincia" required>
+  </label>
+
+  <label class="required">
+    <span>Distrito</span>
+    <input type="text" name="distrito" required>
+  </label>
+</div>
+
+
+      <div class="form-grid">
+  <label class="required">
+    <span>Dirección</span>
+    <input type="text" name="direccion" required>
+  </label>
+
+  <label>
+    <span>Referencia</span>
+    <input type="text" name="referencia">
+  </label>
+
+  <label class="required">
+    <span>Correo electrónico</span>
+    <input type="email" name="correo" required>
+  </label>
+</div>
+
+
+      <p>¿Es menor de edad?
+        <label><input type="radio" name="menor" value="si"> Sí</label>
+        <label><input type="radio" name="menor" value="no"> No</label>
+      </p>
+    </fieldset>
+
+    <!-- Detalle del reclamo -->
+    <fieldset class="detalle-reclamo">
+  <legend>Detalle del reclamo y orden del consumidor</legend>
+
+  <label class="required">
+    <span>Descripción del producto o servicio</span>
+    <textarea name="descripcion_producto" required></textarea>
+  </label>
+
+  <div class="form-grid">
+    <label>Fecha de compra
+      <input type="date" name="fecha_compra" required>
+    </label>
+    <label>Fecha de consumo
+      <input type="date" name="fecha_consumo">
+    </label>
+    <label>Fecha de caducidad
+      <input type="date" name="fecha_caducidad">
+    </label>
+  </div>
+
+  <label class="required">
+    <span>Detalle de la Reclamación / Queja, según lo indicado por el cliente:</span>
+    <textarea name="detalle_reclamo" required></textarea>
+  </label>
+
+  <label class="required">
+    <span>Pedido del Cliente:</span>
+    <textarea name="pedido_cliente" required></textarea>
+  </label>
+</fieldset>
+
+
+    <!-- Notas legales -->
+    <div class="notas">
+      <p><span class="nota-num">(1)</span> Reclamo: disconformidad relacionada con productos o servicios.</p>
+      <p><span class="nota-num">(2)</span> Queja: disconformidad no relacionada con los productos o servicios o con la atención al público.</p>
+     
+      <div class="declaracion">
+      <!-- Columna izquierda -->
+      <div class="col-izq">
+        <label>
+          <input type="checkbox" name="aceptacion" required>
+          Declaro que soy el dueño del servicio y acepto el contenido de este formulario al declarar bajo Declaración Jurada la veracidad de los hechos descritos.
+        </label>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col-der">
+        <ul>
+          <li>La formulación del reclamo no excluye el recurso a otros medios de resolución de controversias ni es un requisito previo para presentar una denuncia ante el Indecopi.</li>
+          <li>El proveedor debe responder a la reclamación en un plazo no superior a quince (15) días naturales, pudiendo ampliar el plazo hasta quince días.</li>
+          <li>Con la firma de este documento, el cliente autoriza a ser contactado después de la tramitación de la reclamación para evaluar la calidad y satisfacción del proceso de atención de reclamaciones.</li>
+        </ul>
+      </div>
+    </div>
+
+      <label>
+        <input type="checkbox" required>
+        He leído y acepto la Política de privacidad y la Política de cookies.
+      </label>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Mensaje de confirmación (inicialmente oculto) -->
+<p id="mensaje-exito" style="display:none; color: green; font-weight: bold; margin-top: 1rem;">
+  ✅ Datos enviados correctamente...
+</p>
+
+</section>
+
+</body>
+<script src="script.js"></script>
+</html>
