@@ -1400,49 +1400,6 @@ label.required span::after {
 
 
 /* ------------------------------
-   PAGINA PRODUCTO NARANJA
------------------------------- */
-
-.hero-naranja {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  background: url("img/naranja.JPG") no-repeat center center/cover;
-}
-
-.hero-naranja h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ffffff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-  animation: fadeDown 1s ease-in-out;
-  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
-  line-height: 1.2;        /* 🔹 controla espacio interno */
-}
-.hero-naranja p {
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-}
-/* Intro (texto izq, imagen der) */
-/* Intro Mandarina */
-.intro-naranja {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background: #f9f9f9;
-  border-radius: 12px;
-  margin-bottom: 3rem;
-}
-
-/* ------------------------------
    PAGINA PRODUCTO PALTA
 ------------------------------ */
 
@@ -1465,12 +1422,14 @@ label.required span::after {
   color: #ffffff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   animation: fadeDown 1s ease-in-out;
-  margin-bottom: 0.5rem;   /* 🔹 reduce espacio hacia el p */
-  line-height: 1.2;        /* 🔹 controla espacio interno */
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
+
 /* ============================
    SECCIÓN PALTA (DOS COLUMNAS)
 =============================== */
+
 .palta-info {
   display: flex;
   align-items: center;
@@ -1478,9 +1437,15 @@ label.required span::after {
   gap: 2rem;
   padding: 3rem 2rem;
   max-width: 1100px;
-  margin: auto;
+  margin: 2rem auto;
+
+  /* Mejora visual */
+  background: linear-gradient(135deg, #f0fff0, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
+/* Texto */
 .palta-info .texto {
   flex: 1;
   text-align: justify;
@@ -1488,15 +1453,30 @@ label.required span::after {
 
 .palta-info .texto h2 {
   font-size: 2rem;
-  color: #2d572c;   /* Verde corporativo */
+  color: #2d572c;
   margin-bottom: 1rem;
+  position: relative;
 }
 
+/* Línea decorativa bajo título */
+.palta-info .texto h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #21bd02, #2d572c);
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Texto */
 .palta-info .texto p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  font-size: 1.05rem;
 }
 
+/* Imagen */
 .palta-info .imagen {
   flex: 1;
   display: flex;
@@ -1506,62 +1486,53 @@ label.required span::after {
 .palta-info .imagen img {
   width: 95%;
   max-width: 450px;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   object-fit: cover;
 }
+
 /* ====================================
    RESPONSIVE - PÁGINA PALTA
 ==================================== */
 
-/* Sección principal palta */
 @media (max-width: 900px) {
 
   .palta-info {
-    flex-direction: column;  /* Texto arriba, imagen abajo */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .palta-info .texto {
-    max-width: 100%;
+    text-align: center;
     padding: 0 1rem;
   }
 
   .palta-info .imagen {
     margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
   }
 
   .palta-info .imagen img {
-    width: 90%;        /* Imagen más adaptable */
-    height: auto;
-    border-radius: 12px;
+    width: 90%;
+    max-width: 100%;
   }
 }
 
-/* ====================================
-   🔥 RESPONSIVE DEFINITIVO PALTA
-==================================== */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
-  .palta-info {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+  .hero-palta h1 {
+    font-size: 2.2rem;
   }
 
-  .palta-info .texto,
-  .palta-info .imagen {
-    width: 100% !important;
+  .palta-info .texto h2 {
+    font-size: 1.6rem;
   }
 
-  .palta-info .imagen img {
-    width: 90% !important;
-    height: auto !important;
+  .palta-info .texto p {
+    font-size: 0.95rem;
   }
 }
+
 
 
 
