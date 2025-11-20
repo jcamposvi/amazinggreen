@@ -1396,6 +1396,149 @@ label.required span::after {
     font-size: 2.2rem;
   }
 }
+/* ------------------------------
+   PAGINA PRODUCTO NARANJA
+------------------------------ */
+
+/* HERO */
+.hero-naranja {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: url("img/naranja.jpg") no-repeat center center/cover;
+}
+
+.hero-naranja h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-naranja p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+
+/* ============================
+   INTRO NARANJA
+=========================== */
+
+.intro-naranja {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+
+  background: linear-gradient(135deg, #fff7e6, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TEXTO */
+.intro-texto {
+  flex: 1;
+  text-align: justify;
+}
+
+.intro-texto h2 {
+  color: #2d572c;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Línea decorativa */
+.intro-texto h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #21bd02, #2d572c);
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+.intro-texto p,
+.intro-texto ul {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* LISTA */
+.intro-texto ul {
+  padding-left: 1rem;
+}
+
+/* IMAGEN */
+.intro-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-imagen img {
+  width: 95%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* ============================
+     RESPONSIVE NARANJA
+=========================== */
+
+@media (max-width: 900px) {
+
+  .intro-naranja {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-texto {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .intro-imagen {
+    margin-top: 1.5rem;
+  }
+
+  .intro-imagen img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero-naranja h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-texto p,
+  .intro-texto ul {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 
