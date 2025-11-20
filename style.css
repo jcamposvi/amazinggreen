@@ -1143,7 +1143,7 @@ label.required span::after {
   align-items: center;
   color: white;
   text-align: center;
-  background: url("img/mandarina.jpg") no-repeat center center/cover;
+  background: url("img/mandarina.JPG") no-repeat center center/cover;
 }
 
 .hero-mandarina h1 {
@@ -1345,8 +1345,7 @@ label.required span::after {
   align-items: center;
   color: white;
   text-align: center;
-  background: url("img/naranja.jpg") no-repeat center center/cover;
-  background-color: #ffb347; /* tono naranja de respaldo */
+  background: url("img/naranja.JPG") no-repeat center center/cover;
 }
 
 .hero-naranja h1 {
