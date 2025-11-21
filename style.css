@@ -1313,6 +1313,7 @@ label.required span::after {
 .intro-texto p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  text-align: justify;
   color: #333;
 }
 
@@ -1409,6 +1410,7 @@ label.required span::after {
   color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .variedad .info .frase-final {
@@ -1613,6 +1615,7 @@ label.required span::after {
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1.05rem;
+  text-align: justify;
 }
 
 /* LISTA */
@@ -1754,6 +1757,7 @@ label.required span::after {
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1.05rem;
+  text-align: justify;
 }
 
 /* Imagen */
