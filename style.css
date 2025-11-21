@@ -846,49 +846,28 @@ button:hover,
 }
 
 /* ------------------------------
-   Libro de Reclamaciones (LDR)
+   Libro de Reclamaciones
 ------------------------------ */
-
-/* Solo afecta a LDR */
+/* Solo para LDR, NO para toda la web */
 body.ldr-body {
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
 }
 
-/* ------------------------------
-   HEADER LDR
------------------------------- */
 .ldr-header {
+  display: block;
+  position: static !important; /* 🔹 fuerza a que se mueva con el scroll */
   text-align: center;
   margin-bottom: 1.5rem;
+  background: transparent; /* por si tenía color */
 }
 
-.logo-container {
-  position: relative;
+.ldr-header img {
+  max-width: 100%;       /* controla el tamaño del logo */
+  height: auto;
   display: inline-block;
 }
 
-.logo-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-}
-
-/* ------------------------------
-    CONTENEDOR PRINCIPAL
------------------------------- */
 .ldr {
   max-width: 1000px;
   margin: 2rem auto;
@@ -904,9 +883,6 @@ body.ldr-body {
   color: #2d572c;
 }
 
-/* ------------------------------
-   FORMULARIO
------------------------------- */
 .ldr-form fieldset {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -938,7 +914,6 @@ body.ldr-body {
   padding: 0.5rem;
   border: 1px solid #aaa;
   border-radius: 6px;
-  font-size: 1rem;
 }
 
 .ldr-form textarea {
@@ -946,27 +921,39 @@ body.ldr-body {
   resize: vertical;
 }
 
-/* REQUIRED */
-label.required span::after {
-  content: " *";
-  color: red;
-  font-weight: bold;
+.notas {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
-/* ------------------------------
-   DETALLE DE RECLAMO
------------------------------- */
+.ldr-form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #2d572c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ldr-form button:hover {
+  background: #21bd02ee;
+}
 .detalle-reclamo {
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 1.5rem;
   margin-top: 1.5rem;
-  background: #fafafa;
+  background: #fafafa; /* 🔹 color de fondo claro */
 }
 
 .detalle-reclamo legend {
   font-weight: bold;
   color: #2d572c;
+  padding: 0 10px;
 }
 
 .detalle-reclamo label {
@@ -978,22 +965,20 @@ label.required span::after {
 .detalle-reclamo textarea {
   width: 100%;
   min-height: 100px;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  resize: vertical;
 }
-
-/* ------------------------------
-   NOTAS LEGALES
------------------------------- */
-.notas {
-  font-size: 0.85rem;
-  color: #333;
-  margin-bottom: 1rem;
+label.required span::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
 }
-
 .nota-num {
   color: red;
   font-weight: bold;
 }
-
 .declaracion {
   display: flex;
   gap: 2rem;
@@ -1007,8 +992,9 @@ label.required span::after {
 
 .declaracion .col-izq label {
   display: flex;
-  gap: 0.5rem;
   align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 500;
 }
 
 .declaracion .col-der {
@@ -1022,90 +1008,72 @@ label.required span::after {
 
 .declaracion .col-der li {
   margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+.logo-container {
+  position: relative;   /* 🔹 referencia para el texto */
+  display: inline-block;
 }
 
-/* ------------------------------
-   BOTÓN
------------------------------- */
-.ldr-form button {
-  display: block;
-  width: 100%;
-  padding: 0.9rem;
-  background: #2d572c;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
+.logo-container img {
+  max-width: 100%;     /* ajusta tamaño del logo */
+  height: auto;
+}
+
+.logo-text {
+  position: absolute;
+  top: 50%;             /* centrado vertical */
+  left: 50%;            /* centrado horizontal */
+  transform: translate(-50%, -50%); /* ajuste perfecto */
+  color: rgb(250, 248, 248);           /* color del texto */
+  font-size: 3.5rem;
   font-weight: bold;
-  cursor: pointer;
-  font-size: 1.1rem;
+  text-align: center;
 }
-
-.ldr-form button:hover {
-  background: #21bd02ee;
-}
-
 /* ===================================================
-      🔥  RESPONSIVE DESIGN
+      RESPONSIVE (sin afectar PC)
    =================================================== */
 
-/* Tablets horizontales y verticales */
+/* Tablets */
 @media (max-width: 1024px) {
   .logo-text {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
-/* CELULARES GRANDES */
+/* Celulares grandes (modificaciones SOLO aquí) */
 @media (max-width: 768px) {
 
   .logo-text {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
+  /* 🟢 Inputs se apilan SOLO en móviles */
   .form-grid {
-    flex-direction: column; /* 🟢 CORRECCIÓN CLAVE */
-  }
-
-  .declaracion {
     flex-direction: column;
   }
 
-  .declaracion .col-izq,
-  .declaracion .col-der {
-    width: 100%;
-  }
-
-  .ldr {
-    padding: 1.5rem;
-  }
-
-  fieldset {
-    padding: 1rem;
+  /* Declaración se apila */
+  .declaracion {
+    flex-direction: column;
   }
 }
 
-/* CELULARES PEQUEÑOS */
+/* Celulares pequeños */
 @media (max-width: 480px) {
 
   .logo-text {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .ldr {
     padding: 1rem;
-  }
-
-  .ldr-form input,
-  .ldr-form select,
-  .ldr-form textarea {
-    font-size: 0.9rem;
   }
 
   .ldr-form button {
     font-size: 1rem;
   }
 }
-
 
 /* ------------------------------
    ESTILOS ESPECÍFICOS POR PÁGINA
