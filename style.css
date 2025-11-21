@@ -282,6 +282,31 @@ header.scrolled {
   border-radius: 6px;
   transition: background 0.3s;
 }
+/* FIX RESPONSIVE - SECCIÓN NOSOTROS (CELULARES) */
+@media (max-width: 768px) {
+
+  .nosotros .contenido {
+    flex-direction: column !important; /* fuerza columna */
+    text-align: center !important;
+  }
+
+  .nosotros .texto {
+    margin-left: 0 !important;  /* elimina empuje hacia la derecha */
+    padding: 0 1rem;            /* mejora lectura */
+  }
+
+  .nosotros .imagen {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .nosotros .imagen img {
+    width: 85% !important;      /* tamaño óptimo en móvil */
+    max-width: 380px;
+  }
+}
 
 
 /* ------------------------------
